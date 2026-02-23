@@ -24,7 +24,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="relative z-50 py-6">
+ <header className="sticky top-0 z-50 py-4">
+  <div className="absolute inset-0 -z-10 bg-white/70 dark:bg-black/40 backdrop-blur border-b border-black/10 dark:border-white/10" />
       <Container>
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -36,12 +37,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Links */}
-          <nav className="hidden md:flex items-center gap-8 text-gray-300">
+<nav className="hidden md:flex items-center gap-8 text-black/60 dark:text-white/70 ">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="hover:text-white transition"
+                className="hover:text-white transition hover:text-black dark:hover:text-white transition"
               >
                 {l.label}
               </a>
@@ -53,7 +54,8 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
               <ThemeToggle />
 
-            <button className="hidden md:inline-flex bg-white text-black px-5 py-2 rounded-full">
+            <button className="hidden md:inline-flex rounded-full px-5 py-2 font-medium
+bg-emerald-400 text-black hover:brightness-110 transition">
               Hire Me
             </button>
 
