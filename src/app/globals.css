@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -12,26 +17,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
-:root{
-  --bg: 255 255 255;   /* light */
-  --fg: 0 0 0;
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
-.dark{
-  --bg: 5 8 7;         /* dark */
-  --fg: 255 255 255;
-}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .beam {
   animation: borderBeam 6s linear infinite;
