@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaGithub, FaGlobe, FaLinkedinIn } from "react-icons/fa";
 import { FaLanguage } from "react-icons/fa6";
 export function FloatingIcons() {
+  const className ="text-black/20 dark:text-white/20"
   const icons = [
-    { Icon: FaFacebookF, className: "text-white/50", style: { top: "60px", left: "30%" }, delay: 0.0 },
-    { Icon: FaGlobe, className: "text-white/50", style: { top: "120px", left: "40%" }, delay: 0.3 },
-    { Icon: FaInstagram, className: "text-white/50", style: { top: "60px", left: "50%" }, delay: 0.6 },
-    { Icon: FaGithub, className: "text-white/50", style: { top: "110px", left: "20%" }, delay: 0.9 },
-        { Icon: FaLinkedinIn, className: "text-white/50", style: { top: "120px", left: "10%" }, delay: 0.9 },
+    { Icon: FaFacebookF, className: className, style: { top: "60px", left: "30%" }, delay: 0.0 },
+    { Icon: FaGlobe, className: className, style: { top: "120px", left: "40%" }, delay: 0.3 },
+    { Icon: FaInstagram, className: className, style: { top: "60px", left: "50%" }, delay: 0.6 },
+    { Icon: FaGithub, className: className, style: { top: "110px", left: "20%" }, delay: 0.9 },
+        { Icon: FaLinkedinIn, className: className, style: { top: "120px", left: "10%" }, delay: 0.9 },
 
   ];
 
