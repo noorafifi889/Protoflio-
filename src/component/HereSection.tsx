@@ -19,7 +19,7 @@ export default function HeroSection() {
       const typed = useTyping(["Front end developer"]);
 
   return (
-    <section className="relative overflow-hidden pt-10 md:pt-14">
+    <section className="relative overflow-hidden pt-10 md:pt-14 md:mb-40">
 
    {/* Background blobs like the screenshot */}
 <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -114,7 +114,7 @@ export default function HeroSection() {
        {/* Card */}
 <motion.div
   variants={item}
-  className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-2 m-10 backdrop-blur"
+  className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-2 m-3 backdrop-blur"
 >
   <svg
     className="pointer-events-none absolute inset-0 h-full w-full"
@@ -126,18 +126,18 @@ export default function HeroSection() {
       y="1"
       width="98"
       height="98"
- 
+ borderRadius="16"
       fill="transparent"
       stroke="rgb(16 185 129)"
       strokeWidth="0.5"
-      strokeDasharray="100 100" // ⬅️ نص بوردر
+      strokeDasharray="100 100"
       animate={{ strokeDashoffset: [0, -660] }}
       transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
       style={{ filter: "drop-shadow(0 0 8px rgba(16,185,129,0.6))" }}
     />
   </svg>
 
-  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-2 backdrop-blur">
+  <div className="relative overflow-hidden rounded-3xl  border-white/10 bg-white/5 p-2 ">
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
       <Image
         src="/unnamed.jpg"
