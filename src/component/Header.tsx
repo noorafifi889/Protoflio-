@@ -24,8 +24,8 @@ export default function Navbar() {
   }, []);
 
   return (
- <header className="sticky top-0 z-50 py-4">
-  <div className="absolute inset-0 -z-10 bg-white/70 dark:bg-black/40 backdrop-blur border-b border-black/10 dark:border-white/10" />
+ <header className="sticky top-0 z-50 py-4 ">
+  <div className="absolute inset-0 -z-10 bg-white dark:bg-black/40 backdrop-blur border-b border-black/10 dark:border-white/10" />
       <Container>
         <div className="flex items-center justify-between">
           {/* Logo */}
