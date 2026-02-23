@@ -1,14 +1,17 @@
 import About from "@/component/About";
 import Header from "@/component/Header";
 import HeroSection from "@/component/HereSection";
+import SkillsSection from "@/component/SkillsSection";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
+   <div   className="  ">
     <Header />
     <HeroSection />
     <About />
+<SkillsSection />
    </div>
   );
 }
