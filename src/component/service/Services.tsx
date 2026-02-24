@@ -94,18 +94,18 @@ export default function ServicesSection() {
             WHAT I OFFER
           </div>
 
-          <h2 className="mt-6 text-3xl font-semibold text-white md:text-4xl">
+          <h2 className="mt-6 text-3xl font-semibold dark:text-white md:text-4xl">
             Built for innovation. Designed for results.
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-white/60 md:text-base mb-5">
+          <p className="mx-auto mt-3 max-w-2xl text-sm dark:text-white/60 dark:text-black/60 md:text-base mb-5">
             Comprehensive solutions to transform your ideas into exceptional
             digital experiences.
           </p>
         </div>
 
-        <div className="grid gap-5 mt-40 " style ={{marginTop:"50px"}}>
+        <div className="grid gap-5 mt-40 dark:text-white/60 dark:text-black/60 " style ={{marginTop:"50px"}}>
        
-     <div className="grid gap-5 sm:grid-cols-2" >
+     <div className="grid gap-5 sm:grid-cols-2 dark:text-white  text-black" >
              <motion.div
             variants={fadeUp}
             custom={2}
