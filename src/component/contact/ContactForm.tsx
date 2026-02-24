@@ -4,34 +4,40 @@ import React, { useRef, useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { Field } from "./Field";
 import emailjs from "@emailjs/browser";
-
+import toast from "react-hot-toast";
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formRef.current) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!formRef.current) return;
 
-    setLoading(true);
-    try {
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
-      formRef.current.reset();
-      alert("Message sent ✅");
-    } catch (err) {
-      alert("Failed ❌");
-    } finally {
-      setLoading(false);
-    }
-  };
+  setLoading(true);
+
+  const promise = emailjs.sendForm(
+    process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+    formRef.current,
+    process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+  );
+
+  toast.promise(promise, {
+    loading: "Sending message...",
+    success: "Message sent successfully ✅",
+    error: "Something went wrong ❌",
+  });
+
+  try {
+    await promise;
+    formRef.current.reset();
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
-    <div className="rounded-2xl p-5 backdrop-blur-xl bg-emerald-300/50 shadow-2x">
+    <div className="rounded-2xl p-5 bg-emerald-300/10  ">
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 ">
         <Field label="Name" placeholder="Your name" type="text" name="from_name" />
         <Field label="Email" placeholder="your.email@example.com" type="email" name="reply_to" />

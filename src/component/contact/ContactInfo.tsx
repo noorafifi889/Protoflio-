@@ -2,7 +2,7 @@
 
 import React from "react";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaGlassMartiniAlt, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function ContactInfo() {
   return (
@@ -42,6 +42,8 @@ export default function ContactInfo() {
           <SocialIcon Icon={FaGithub} />
           <SocialIcon Icon={FaLinkedinIn} />
           <SocialIcon Icon={FaTwitter} />
+                    {/* <SocialIcon Icon={FaGlassMartiniAlt} /> */}
+
         </div>
       </div>
     </div>
