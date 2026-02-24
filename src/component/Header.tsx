@@ -54,10 +54,15 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
               <ThemeToggle />
 
-            <button className="hidden md:inline-flex rounded-full px-5 py-2 font-medium
-bg-emerald-400 text-black hover:brightness-110 transition">
-              Hire Me
-            </button>
+<button
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="hidden md:inline-flex rounded-full px-5 py-2 font-medium
+  bg-emerald-400 text-black hover:brightness-110 transition"
+>
+  Hire Me
+</button>
 
             {/* Burger Button */}
             <button
