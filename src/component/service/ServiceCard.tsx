@@ -23,10 +23,10 @@ export function ServiceCard({
         <Icon className="h-6 w-6 text-emerald-300" />
       </div> */}
 
-      <h3 className="text-xl font-semibold text-white transition group-hover:text-emerald-200">
+      <h3 className="text-xl font-semibold dark:text-white transition group-hover:text-emerald-200">
         {title}
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-white/60">{desc}</p>
+      <p className="mt-2 text-sm leading-relaxed text-black/60 dark:text-white/60">{desc}</p>
 
       <div className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-0 bg-emerald-400/40 transition-all duration-300 group-hover:w-full" />
     </div>

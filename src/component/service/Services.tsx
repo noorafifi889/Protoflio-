@@ -103,7 +103,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 mt-40 dark:text-white/60 dark:text-black/60 " style ={{marginTop:"50px"}}>
+        <div className="grid gap-5 mt-40 dark:text-white/60  text-black/70" style ={{marginTop:"50px"}}>
        
      <div className="grid gap-5 sm:grid-cols-2 dark:text-white  text-black" >
              <motion.div
