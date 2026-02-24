@@ -74,10 +74,10 @@ export default function SkillsSection() {
   id="skills"
   className="
     relative
-    mt-24 mb-24
+    mt-20 mb-20
     bg-white text-black
     dark:bg-black dark:text-white
-    py-20
+    py-2
   "
 >
       <Container>
@@ -149,8 +149,7 @@ export default function SkillsSection() {
             })}
           </motion.div>
 
-          {/* bottom spacing to make it feel like a full section */}
-          <div className="h-6" />
+      
         </div>
       </Container>
     </section>
