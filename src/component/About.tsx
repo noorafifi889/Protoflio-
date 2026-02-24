@@ -114,7 +114,7 @@ export default function About() {
 
                 <a
                   href="#contact"
-                  className="rounded-full border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.06]"
+                  className="rounded-full border border-white/15 bg-white dark:bg-white/[0.02] px-6 py-3 text-sm font-semibold dark:text-white text-black  transition hover:bg-white/[0.06]"
                 >
                   Contact Me
                 </a>
