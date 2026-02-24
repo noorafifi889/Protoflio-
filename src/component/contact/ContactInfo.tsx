@@ -16,8 +16,7 @@ export default function ContactInfo() {
         </p>
       </div>
 
-      <div className="grid gap-4">
-        <InfoRow
+<div className="grid gap-4">        <InfoRow
           icon={<HiOutlineEnvelope className="h-5 w-5" />}
           label="Email"
           value="noorelafifi889@gmail.com"
@@ -38,7 +37,7 @@ export default function ContactInfo() {
         <p className="text-sm font-semibold text-slate-900 dark:text-white">
           Connect with me
         </p>
- <div className="mt-3 flex gap-3">
+ <div className="mt-3 flex gap-3  ">
   <a href="https://github.com/noorafifi889" target="_blank" rel="noopener noreferrer">
     <SocialIcon Icon={FaGithub} />
   </a>
@@ -70,8 +69,9 @@ function InfoRow({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl  p-4 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03]">
-      <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-emerald-400/25 bg-emerald-400/10 text-emerald-700 dark:text-emerald-200">
+<div className="flex items-center gap-4 rounded-2xl p-4 backdrop-blur-xl
+bg-white/60 shadow-[0_8px_25px_rgba(0,0,0,0.08)] dark:bg-white/[0.03] dark:shadow-none">
+        <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-emerald-400/25 bg-emerald-400/10 text-emerald-700 dark:text-emerald-200">
         {icon}
       </div>
       <div>

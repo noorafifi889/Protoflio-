@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-white/10 bg-black/80 dark:bg-black text-white">
+    <footer className=" border-t border-white/10 bg-black/80 dark:bg-black text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 grid gap-10 md:grid-cols-3">
         {/* LEFT */}
         <div>
