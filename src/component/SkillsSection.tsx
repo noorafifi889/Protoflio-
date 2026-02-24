@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Container from "./Container";
 
 import { FaReact } from "react-icons/fa";
@@ -49,7 +49,8 @@ const skills = [
   { icon: SiFigma, name: "Figma" },
 ];
 
-const containerVariants = {
+
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -57,7 +58,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 14, scale: 0.98 },
   show: {
     opacity: 1,
@@ -73,10 +74,10 @@ export default function SkillsSection() {
   id="skills"
   className="
     relative
-    mt-24 mb-24
+    mt-20 mb-20
     bg-white text-black
     dark:bg-black dark:text-white
-    py-20
+    py-2
   "
 >
       <Container>
@@ -148,8 +149,7 @@ export default function SkillsSection() {
             })}
           </motion.div>
 
-          {/* bottom spacing to make it feel like a full section */}
-          <div className="h-6" />
+      
         </div>
       </Container>
     </section>

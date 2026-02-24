@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
 import SocialFloatingMenu from "./SocialFloatingMenu.";
 import { FloatingIcons } from "./FloatingIcons";
+import Link from "next/link";
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
@@ -111,23 +112,29 @@ export default function HeroSection() {
               variants={item}
               className="mt-8 flex items-center gap-4"
             >
-              <motion.button
-                className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 320, damping: 18 }}
-              >
-                Get in Touch
-              </motion.button>
-
-              <motion.button
-                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-black dark:text-white/50   transition"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 320, damping: 18 }}
-              >
-                View Projects
-              </motion.button>
+        <Link href="#contact">
+  <motion.button
+    className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
+    whileHover={{ y: -2 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Get in Touch
+  </motion.button>
+</Link>
+<motion.button
+  onClick={() =>
+    document.getElementById("projects")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-black dark:text-white/50 transition"
+  whileHover={{ y: -2 }}
+  whileTap={{ scale: 0.98 }}
+  transition={{ type: "spring", stiffness: 320, damping: 18 }}
+>
+  View Projects
+</motion.button>
             </motion.div>
 
             {/* stats */}

@@ -11,6 +11,15 @@ const links = [
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const headerOffset = 90;
+  const y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -39,14 +48,18 @@ export default function Navbar() {
           {/* Desktop Links */}
 <nav className="hidden md:flex items-center gap-8 text-black/60 dark:text-white/70 ">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="hover:text-white transition hover:text-black dark:hover:text-white transition"
-              >
-                {l.label}
-              </a>
-            ))}
+  <a
+    key={l.href}
+    href={l.href}
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToId(l.href.replace("#", ""));
+    }}
+    className="hover:text-white transition hover:text-black dark:hover:text-white transition"
+  >
+    {l.label}
+  </a>
+))}
           </nav>
 
           {/* Right side */}
@@ -54,10 +67,15 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
               <ThemeToggle />
 
-            <button className="hidden md:inline-flex rounded-full px-5 py-2 font-medium
-bg-emerald-400 text-black hover:brightness-110 transition">
-              Hire Me
-            </button>
+<button
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="hidden md:inline-flex rounded-full px-5 py-2 font-medium
+  bg-emerald-400 text-black hover:brightness-110 transition"
+>
+  Hire Me
+</button>
 
             {/* Burger Button */}
             <button
