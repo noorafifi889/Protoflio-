@@ -13,6 +13,7 @@ import {
 
 import { ServiceCard } from "./ServiceCard";
 import { motion } from "framer-motion";
+import { easeInOut } from "framer-motion";
 import { InfoCard } from "../about-me/infoCard";
 import { FaBolt, FaCode, FaFigma, FaMobileAlt, FaPhone, FaRocket, FaShieldAlt, FaTachometerAlt, FaTelegram } from "react-icons/fa";
 import { StatItem } from "../about-me/StatItem";
@@ -30,7 +31,7 @@ const fadeUp = {
 
 const floaty = {
   animate: { y: [0, -8, 0] },
-  transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+  transition: { duration: 3, repeat: Infinity, ease: easeInOut },
 };
 
 const services = [
