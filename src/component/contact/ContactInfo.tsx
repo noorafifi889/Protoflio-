@@ -2,7 +2,7 @@
 
 import React from "react";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
-import { FaGithub, FaGlassMartiniAlt, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaGlassMartiniAlt, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function ContactInfo() {
   return (
@@ -38,13 +38,23 @@ export default function ContactInfo() {
         <p className="text-sm font-semibold text-slate-900 dark:text-white">
           Connect with me
         </p>
-        <div className="mt-3 flex gap-3">
-          <SocialIcon Icon={FaGithub} />
-          <SocialIcon Icon={FaLinkedinIn} />
-          <SocialIcon Icon={FaTwitter} />
-                    {/* <SocialIcon Icon={FaGlassMartiniAlt} /> */}
+ <div className="mt-3 flex gap-3">
+  <a href="https://github.com/noorafifi889" target="_blank" rel="noopener noreferrer">
+    <SocialIcon Icon={FaGithub} />
+  </a>
 
-        </div>
+  <a href="https://www.linkedin.com/in/noor-al-afifi-168483399" target="_blank" rel="noopener noreferrer">
+    <SocialIcon Icon={FaLinkedinIn} />
+  </a>
+
+  <a href="https://twitter.com/noor-afifi" target="_blank" rel="noopener noreferrer">
+    <SocialIcon Icon={FaTwitter} />
+  </a>
+
+  <a href="mailto:noorelafifi889@gmail.com">
+    <SocialIcon Icon={FaEnvelope} />
+  </a>
+</div>
       </div>
     </div>
   );
