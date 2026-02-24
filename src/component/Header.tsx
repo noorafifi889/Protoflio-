@@ -11,6 +11,15 @@ const links = [
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const headerOffset = 90;
+  const y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -39,14 +48,18 @@ export default function Navbar() {
           {/* Desktop Links */}
 <nav className="hidden md:flex items-center gap-8 text-black/60 dark:text-white/70 ">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="hover:text-white transition hover:text-black dark:hover:text-white transition"
-              >
-                {l.label}
-              </a>
-            ))}
+  <a
+    key={l.href}
+    href={l.href}
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToId(l.href.replace("#", ""));
+    }}
+    className="hover:text-white transition hover:text-black dark:hover:text-white transition"
+  >
+    {l.label}
+  </a>
+))}
           </nav>
 
           {/* Right side */}
