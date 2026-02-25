@@ -95,12 +95,13 @@ export default function ProjectSection() {
   return (
     <section id="projects" className="relative py-24 ">
       {/* background glows */}
-      {/* <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 top-[-120px] h-[520px] w-[520px] rounded-full dark:bg-emerald-500/10 blur-3xl" />
-        <div className="absolute right-[-220px] top-[-140px] h-[700px] w-[700px] rounded-full bg-emerald-500/10 blur-3xl" />
-        <div className="absolute left-1/2 top-[180px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/10 blur-3xl" />
-      </div> */}
+   <div className="pointer-events-none absolute inset-0 -z-10">
+  {/* base */}
+  <div className="absolute inset-0 bg-white dark:bg-[#0c0710]" />
 
+  {/* soft emerald radial */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.08),transparent_55%)] dark:bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.12),transparent_55%)]" />
+</div>
       <Container>
         <div className="mx-auto  px-6">
           {/* heading */}

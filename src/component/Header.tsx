@@ -55,7 +55,7 @@ export default function Navbar() {
       e.preventDefault();
       scrollToId(l.href.replace("#", ""));
     }}
-    className="hover:text-white transition hover:text-black dark:hover:text-white transition"
+    className=" transition hover:text-black dark:hover:text-white transition"
   >
     {l.label}
   </a>
@@ -78,31 +78,36 @@ export default function Navbar() {
 </button>
 
             {/* Burger Button */}
-            <button
-              type="button"
-              aria-label="Open menu"
-              aria-expanded={open}
-              onClick={() => setOpen((v) => !v)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 transition"
-            >
-              <span className="relative block h-4 w-5">
-                <span
-                  className={`absolute left-0 top-0 h-[2px] w-5 bg-white transition ${
-                    open ? "translate-y-[7px] rotate-45" : ""
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-[7px] h-[2px] w-5 bg-white transition ${
-                    open ? "opacity-0" : ""
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-[14px] h-[2px] w-5 bg-white transition ${
-                    open ? "-translate-y-[7px] -rotate-45" : ""
-                  }`}
-                />
-              </span>
-            </button>
+          <button
+  type="button"
+  aria-label="Open menu"
+  aria-expanded={open}
+  onClick={() => setOpen((v) => !v)}
+  className="
+    md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full
+    border border-black/10 bg-black/5 hover:bg-black/10
+    dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10
+    backdrop-blur transition
+  "
+>
+  <span className="relative block h-4 w-5">
+    <span
+      className={`absolute left-0 top-0 h-[2px] w-5 transition ${
+        open ? "translate-y-[7px] rotate-45" : ""
+      } bg-black/70 dark:bg-white`}
+    />
+    <span
+      className={`absolute left-0 top-[7px] h-[2px] w-5 transition ${
+        open ? "opacity-0" : ""
+      } bg-black/70 dark:bg-white`}
+    />
+    <span
+      className={`absolute left-0 top-[14px] h-[2px] w-5 transition ${
+        open ? "-translate-y-[7px] -rotate-45" : ""
+      } bg-black/70 dark:bg-white`}
+    />
+  </span>
+</button>
           </div>
         </div>
 
@@ -112,25 +117,27 @@ export default function Navbar() {
             open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-              <ThemeToggle />
+    
 
-          <div className="mt-4 rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-4">
-            <nav className="flex flex-col gap-2">
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-xl px-3 py-2 text-gray-200 hover:bg-white/10 hover:text-white transition"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </nav>
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/40 backdrop-blur p-4">
+         <nav className="flex flex-col gap-2">
+  {links.map((l) => (
+    <a
+      key={l.href}
+      href={l.href}
+      onClick={() => setOpen(false)}
+      className="rounded-xl px-3 py-2 text-slate-700 hover:bg-black/5 hover:text-slate-900
+                 dark:text-gray-300 dark:hover:bg-white/10 transition"
+    >
+      {l.label}
+    </a>
+  ))}
+</nav>
 
             <button
-              onClick={() => setOpen(false)}
-              className="mt-4 w-full bg-white text-black py-2 rounded-xl font-medium"
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }}              className="mt-4 w-full  text-black py-2  bg-emerald-300 rounded-xl font-medium"
             >
               Hire Me
             </button>

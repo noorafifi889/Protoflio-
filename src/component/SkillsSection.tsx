@@ -68,6 +68,15 @@ const cardVariants: Variants = {
   },
 };
 
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
 export default function SkillsSection() {
   return (
 <section
@@ -78,11 +87,20 @@ export default function SkillsSection() {
     bg-white text-black
     dark:bg-black dark:text-white
     py-2
+  border-t border-emerald-400/10 dark:border-white/10
   "
 >
       <Container>
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="text-center">
+                <motion.div
+                            variants={fadeUp}
+                            custom={0}
+                            className="inline-flex items-center gap-2 mb-5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold tracking-wide text-black dark:text-emerald-200"
+                          >
+                            <span className="inline-block h-2 w-2 rounded-full bg-emerald-300" />
+                          My Skills
+                          </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,6 +151,7 @@ export default function SkillsSection() {
                     dark:bg-white/5 dark:border-white/10
                     hover:shadow-md
                     transition
+                    border-emerald-300
                   "
                 >
                   {/* glow */}

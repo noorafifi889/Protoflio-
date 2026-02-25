@@ -17,36 +17,25 @@ const item = {
 };
 
 export default function HeroSection() {
-  const typed = useTyping(["Front end developer"]);
+  const typed = useTyping(["Web Developer","Front end developer","Next Js Developer"], 100, 2000);
 
   return (
     <section className="relative overflow-hidden  pt-10  pb-50">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        {/* base */}
-        <div className="absolute inset-0 bg-white dark:bg-[#050807]" />
+<div className="pointer-events-none absolute inset-0 -z-10">
+  {/* base */}
+  <div className="absolute inset-0 bg-white dark:bg-[#120b13]" />
 
-        <div className="absolute -left-40 top-[-120px] h-[520px] w-[520px] rounded-full bg-emerald-500/15 dark:bg-emerald-500/10 blur-3xl" />
-        <div className="absolute left-[140px] top-[120px] h-[620px] w-[620px] rounded-full bg-emerald-400/15 dark:bg-emerald-400/10 blur-3xl" />
-        <div className="absolute right-[-220px] top-[-140px] h-[700px] w-[700px] rounded-full bg-emerald-500/15 dark:bg-emerald-500/10 blur-3xl" />
+  {/* soft glow left */}
+  <div className="absolute -left-40 top-10 h-[520px] w-[520px] rounded-full bg-emerald-400/10 blur-3xl dark:bg-emerald-400/12" />
 
-        <div className="absolute -left-24 top-24 h-[560px] w-[760px] rounded-[999px] bg-emerald-500/12 dark:bg-emerald-500/10 blur-2xl rotate-[-14deg]" />
-        <div className="absolute left-40 top-[-40px] h-[560px] w-[860px] rounded-[999px] bg-emerald-400/12 dark:bg-emerald-400/10 blur-2xl rotate-[18deg]" />
-        <div className="absolute right-[-180px] bottom-[-120px] h-[560px] w-[860px] rounded-[999px] bg-emerald-500/12 dark:bg-emerald-500/10 blur-2xl rotate-[-10deg]" />
+  {/* soft glow right */}
+  <div className="absolute right-[-260px] top-[-180px] h-[640px] w-[640px] rounded-full bg-emerald-400/10 blur-3xl dark:bg-emerald-400/12" />
 
-        <div
-          className="absolute inset-0
-    bg-[radial-gradient(circle_at_18%_30%,rgba(16,185,129,0.10),transparent_52%),radial-gradient(circle_at_70%_35%,rgba(16,185,129,0.08),transparent_55%)]
-    dark:bg-[radial-gradient(circle_at_18%_30%,rgba(16,185,129,0.18),transparent_52%),radial-gradient(circle_at_70%_35%,rgba(16,185,129,0.14),transparent_55%)]"
-        />
-
-        <div
-          className="absolute inset-0
-    bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.55)_40%,rgba(255,255,255,0)_72%)]
-    dark:bg-[radial-gradient(ellipse_at_center,transparent_15%,rgba(0,0,0,0.85)_75%)]"
-        />
+  {/* radial green vignette */}
+  <div className="absolute inset-0 dark:bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.12),transparent_55%)]" />
+</div>
 
         <FloatingIcons />
-      </div>
 
       <Container>
         <motion.div
@@ -76,19 +65,18 @@ export default function HeroSection() {
                   }}
                 />
                 <span className=" text-zinc-800 dark:text-emerald-100/90">
-                  Web Developer - Next & React js Developer
+                  Web Developer - Front End Developer Based Palestine 
                 </span>
               </motion.div>
             </motion.div>
 
-            <motion.h1
-              variants={item}
-              className="mt-6 text-8xl font-semibold tracking-tight text-black dark:text-white md:text-6xl"
-            >
-              Noor Al Afifi, <br />
-              <span className="text-emerald-400 pt-5 ">{`${typed}`}</span>
-            </motion.h1>
-
+ <motion.h1
+  variants={item}
+  className="mt-6 text-4xl font-semibold tracking-tight text-black dark:text-white md:text-6xl"
+>
+  Noor Al Afifi, <br />
+  <span className="pt-5 mt-3 text-emerald-400">{typed}</span>
+</motion.h1>
             {/* HOOK */}
             <motion.p
               variants={item}
@@ -113,14 +101,21 @@ export default function HeroSection() {
               className="mt-8 flex items-center gap-4"
             >
         <Link href="#contact">
-  <motion.button
-    className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition"
-    whileHover={{ y: -2 }}
-    whileTap={{ scale: 0.98 }}
-  >
-    Get in Touch
-  </motion.button>
+<motion.button
+  className="
+    h-12 rounded-full px-6 text-sm font-medium
+    bg-emerald-400 text-black
+    hover:brightness-110
+    transition
+  "
+  whileHover={{ y: -2 }}
+  whileTap={{ scale: 0.98 }}
+>
+  Get in Touch
+</motion.button>
 </Link>
+
+    <Link href="#projects">
 <motion.button
   onClick={() =>
     document.getElementById("projects")?.scrollIntoView({
@@ -128,29 +123,37 @@ export default function HeroSection() {
       block: "start",
     })
   }
-  className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-black dark:text-white/50 transition"
+  className="
+    h-12 rounded-full px-6 text-sm font-medium
+    border border-black/10 bg-white/60 text-black backdrop-blur
+    hover:bg-white/80
+    dark:border-white/15 dark:bg-white/[0.06] dark:text-white
+    dark:hover:bg-white/[0.12]
+    transition
+  "
   whileHover={{ y: -2 }}
   whileTap={{ scale: 0.98 }}
   transition={{ type: "spring", stiffness: 320, damping: 18 }}
 >
   View Projects
 </motion.button>
+</Link>
             </motion.div>
 
             {/* stats */}
-            <motion.div
+            {/* <motion.div
               variants={item}
               className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6"
             >
               <Stat value="9+" label="Projects" />
               <Stat value="15+" label="Technologies" />
               <Stat value="98%" label="Satisfaction" />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
           {/* Card */}
           <motion.div
             variants={item}
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-2 m-3 backdrop-blur"
+            className="relative overflow-hidden  rounded-3xl border border-white/10 bg-white/5 p-2 m-3 backdrop-blur"
           >
             <svg
               className="pointer-events-none absolute inset-0 h-full w-full"

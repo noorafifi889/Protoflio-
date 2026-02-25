@@ -12,7 +12,7 @@ export function ServiceCard({
 //   Icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
-    <div className=" overflow-hidden  ">
+    <div className=" overflow-hidden   ">
       {/* glow */}
       <div className="pointer-events-none absolute -inset-8 opacity-0 blur-3xl transition duration-300 group-hover:opacity-100">
         <div className="absolute left-1/3 top-1/3 h-48 w-48 rounded-full bg-emerald-500/15" />
