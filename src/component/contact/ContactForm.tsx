@@ -37,7 +37,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 };
 
   return (
-    <div className="rounded-2xl p-5 bg-emerald-300/10  ">
+    <div className="rounded-2xl p-5 bg-emerald-400/10  dark:bg-gray-400/20 ">
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 ">
         <Field label="Name" placeholder="Your name" type="text" name="from_name" />
         <Field label="Email" placeholder="your.email@example.com" type="email" name="reply_to" />

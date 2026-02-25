@@ -8,7 +8,7 @@ import { FloatingIcons } from "../FloatingIcons";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative py-20 ">
+    <section id="contact" className="relative py-20  border-t border-emerald-400/10 dark:border-white/10">
     
 
         <FloatingIcons />
@@ -31,7 +31,7 @@ export default function ContactSection() {
         </div>
 
         {/* Main Card */}
-        <div className="rounded-3xl  bg-white/70 p-6 shadow-[0_0_0_1px_rgba(15,23,42,0.06)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-[0_0_0_1px_rgba(255,255,255,0.04)]  mt-15" style={{marginTop:"20px"}}>
+        <div className="rounded-3xl  p-6  mt-15" style={{marginTop:"20px"}}>
           <div className="grid gap-8 md:grid-cols-2">
             <ContactForm />
             <ContactInfo />
