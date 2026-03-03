@@ -118,8 +118,8 @@ export default function Navbar() {
           }`}
         >
     
-
-          <div className="mt-4 rounded-2xl border border-white/10 bg-white/40 backdrop-blur p-4">
+ 
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/40 dark:bg-black/40  backdrop-blur p-4">
          <nav className="flex flex-col gap-2">
   {links.map((l) => (
     <a

@@ -110,13 +110,15 @@ export default function About() {
                 custom={5}
                 className="mt-10 flex flex-wrap gap-3"
               >
-                <a
-                  href="/noor-CV.pdf"
-                  className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
-                >
-                  Download Resume
-                </a>
-
+             <a
+  href="/NoorAl-Afifi-CV1.pdf"
+  target="_blank"
+  download
+  rel="noopener noreferrer"
+  className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
+>
+  Download Resume
+</a>
                 <a
                   href="#contact"
                   className="rounded-full border border-black/10 bg-white/50 px-6 py-3 text-sm font-semibold text-black transition hover:bg-black/5
