@@ -24,7 +24,6 @@ const floaty = {
   transition: { duration: 6, repeat: Infinity, ease: easeInOut },
 };
 
-// ✅ نفس شكل الكارد (glass + بوردر واضح) بدون تغيير الديزاين
 const cardGlass =
   "rounded-2xl border border-emerald-200/50 bg-white/10 p-6 backdrop-blur-xl " +
   "shadow-[0_12px_40px_rgba(0,0,0,0.06)] " +
@@ -39,7 +38,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-32 md:py-40 border-t border-emerald-400/10 dark:border-white/10"
+      className="relative overflow-hidden  md:pt-35 border-t border-emerald-400/10 dark:border-white/10"
     >
  
 
