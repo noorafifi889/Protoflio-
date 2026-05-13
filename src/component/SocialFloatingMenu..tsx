@@ -31,7 +31,7 @@ export default function SocialFloatingMenu() {
 
       {/* X (Twitter) */}
       <Link 
-        href="https://x.com/your-username" 
+        href="https://x.com/noor_afifi04" 
         target="_blank" 
         className="text-white/70 hover:text-white hover:scale-110 transition-all"
       >
@@ -40,7 +40,7 @@ export default function SocialFloatingMenu() {
 
       {/* Instagram */}
       <Link 
-        href="https://instagram.com/your-username" 
+        href="https://instagram.com/noor_afifi04" 
         target="_blank" 
         className="text-white/70 hover:text-pink-500 hover:scale-110 transition-all"
       >
